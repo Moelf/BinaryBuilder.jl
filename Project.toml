@@ -37,7 +37,6 @@ BinaryBuilderBase = "1.4"
 GitHub = "5.1"
 HTTP = "0.8, 0.9"
 JLD2 = "0.1.6, 0.2, 0.3, 0.4"
-JLLWrappers = "1.2.0"
 JSON = "0.21"
 LoggingExtras = "0.4"
 ObjectFile = "0.3.6"
@@ -51,10 +50,9 @@ ghr_jll = "0.13.0"
 julia = "1.7"
 
 [extras]
-JLLWrappers = "692b3bcd-3c85-4b1f-b108-f13ce0eb3210"
 Tar = "a4e569a6-e804-4fa4-b0f3-eef7a1d5b13e"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 VT100 = "7774df62-37c0-5c21-b34d-f6d7f98f54bc"
 
 [targets]
-test = ["JLLWrappers", "Tar", "Test", "VT100"]
+test = ["Tar", "Test", "VT100"]

@@ -1313,6 +1313,8 @@ function build_jll_package(src_name::String,
 
         open(joinpath(pkg_dir, "select_artifacts.jl"), "w") do io
             println(io, """
+            push!(Base.LOAD_PATH, dirname(@__DIR__))
+
             using TOML, Artifacts, Base.BinaryPlatforms
             include("./platform_augmentation.jl")
             artifacts_toml = joinpath(dirname(@__DIR__), "Artifacts.toml")
@@ -1324,7 +1326,7 @@ function build_jll_package(src_name::String,
             platform = augment_platform!(HostPlatform(parse(Platform, target_triplet)))
 
             # Select all downloadable artifacts that match that platform
-            artifacts = select_downloadable_artifacts(artifacts_toml; platform)
+            artifacts = select_downloadable_artifacts(artifacts_toml; platform, include_lazy=true)
 
             #Output the result to `stdout` as a TOML dictionary
             TOML.print(stdout, artifacts)
