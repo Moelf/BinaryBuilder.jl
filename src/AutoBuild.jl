@@ -1577,6 +1577,7 @@ function build_project_dict(name, version, dependencies::Array{Dependency}, juli
     # Once we stop supporting Julia 1.5-, we can drop the `Pkg` requirement.
     project["deps"]["Libdl"] = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
     project["deps"]["Pkg"] = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+    project["deps"]["TOML"] = "fa267f1f-6049-4f14-aa54-33bafae1ed76"
     project["deps"]["Artifacts"] = "56f22d72-fd6d-98f1-02f0-08ddc0907c33"
     project["deps"]["JLLWrappers"] = "692b3bcd-3c85-4b1f-b108-f13ce0eb3210"
     if lazy_artifacts
