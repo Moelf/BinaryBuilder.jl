@@ -150,7 +150,7 @@ supported ones. A few additional keyword arguments are accept:
 !!! note
 
     The `init_block` and `augment_platform_block` keyword arguments are experimental
-    and may be removed in a future version of this package. Please use it sparingly.
+    and may be removed in a future version of this package. Please use them sparingly.
 
 """
 function build_tarballs(ARGS, src_name, src_version, sources, script,
