@@ -1350,8 +1350,7 @@ function build_jll_package(src_name::String,
 
         if !isempty(augment_platform_block)
             print(io, """
-            include(path) = Base.include(@__MODULE__, path)
-            include(joinpath("..", ".pkg", "platform_augmentation.jl"))
+            Base.include(@__MODULE__, joinpath("..", ".pkg", "platform_augmentation.jl"))
             """)
         end
 
